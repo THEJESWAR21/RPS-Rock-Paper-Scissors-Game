@@ -8,6 +8,7 @@ const game = () => {
     const introScreen = document.querySelector(".intro");
     const match = document.querySelector(".match");
 
+
     playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
@@ -49,13 +50,14 @@ const game = () => {
     });
   };
 
-  const updateScore = () => {
+  const updateScore = (pScore, cScore) => {
     const playerScore = document.querySelector(".player-score p");
     const computerScore = document.querySelector(".computer-score p");
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
   };
 
+ 
   const compareHands = (playerChoice, computerChoice) => {
     //Update Text
     const winner = document.querySelector(".winner");
